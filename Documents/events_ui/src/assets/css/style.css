@@ -57,6 +57,12 @@ body {
   justify-content: space-between;
 }
 
+.drop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .offcanvas #page {
   overflow: hidden;

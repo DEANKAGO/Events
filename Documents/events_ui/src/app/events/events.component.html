@@ -30,7 +30,6 @@
 
 
 
-
 <div class="fh5co-loader"></div>
 	<div id="page">
 
@@ -43,13 +42,31 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<h1>See <em>Events</em> Around You</h1>
-							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+	
+	<br>
+
+	<div style="margin:auto; width: 50%; border: 3px solid black; padding: 10px;">
+		<select class="bg-secondary" style="margin:auto; width: 50%;" name="" id="" [(ngModel)]="CategorySelected" (ngModelChange)="onCategorySelected($event)">
+			<option value="" *ngFor="let category of listCategories" [value]="category.id">
+				{{category.title}}
+			</option>
+		</select>
+	</div>
+
+	<ul *ngFor="let event of listEvents" >
+		<li>Event Title : {{event.title}}</li>
+		<li>Event Description : {{event.about}}</li>
+		<img [src]="event.photo" alt="qwerty">
+		<li>Event Location : {{event.Location}}</li>
+		<li>Event Due Date{{event.due_date}}</li>
+		<li>Date Posted : {{event.date}}</li>
+	</ul>
 
 	
 	<div id="fh5co-gallery" class="fh5co-section">

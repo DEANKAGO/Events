@@ -4,9 +4,8 @@ export class Events {
   title:string;
   about:string;
   Location :string;
-  time:string;
   due_date:string;
   photo:string;
   date:string;
-  county:string;
+  category:string;
 }
