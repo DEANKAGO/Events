@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+// import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+// import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+
+
 import { AppRoutingModule, routingcomponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -25,6 +29,8 @@ import { SingleEventComponent } from './single-event/single-event.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    // ShareButtonsModule,
+    // ShareIconsModule,
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]

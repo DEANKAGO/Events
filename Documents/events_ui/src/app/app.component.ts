@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 import { EventsService } from './services/events.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent {
   title = 'events_ui';
 
   constructor(private _eventService: EventsService) {}
+
 
 
   ngOnInit() {
