@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import {EventsService} from '../services/events.service';
 import {Events} from '../classes/events';
 import { Category } from '../classes/category';
+import { MainEvents } from '../classes/main-events'
 
 
 @Component({
@@ -18,12 +19,19 @@ export class EventsComponent implements OnInit {
   listCategories: Category[];
   CategorySelected:Number;
   listEvents: Events[];
+  lstEvents: MainEvents[];
+  
   
 
   ngOnInit(): void {
     this._eventService.getCategories().subscribe(data=>{
       this.listCategories = data;
     })
+
+    this._eventService.getMainEvents().subscribe(data=>{
+      this.lstEvents = data;
+    })
+
   }
 
 

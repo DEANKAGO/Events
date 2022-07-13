@@ -109,5 +109,7 @@
       }
     }
   },
-  "defaultProject": "events_ui"
+  "cli": {
+    "analytics": false
+  }
 }

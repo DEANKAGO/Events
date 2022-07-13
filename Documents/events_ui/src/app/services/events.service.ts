@@ -20,5 +20,9 @@ export class EventsService {
     return this.httpclient.get("http://127.0.0.1:8000/api/all_events/", {params:params1})
   }
 
+  getMainEvents(): Observable<any> {
+    return this.httpclient.get("http://127.0.0.1:8000/api/main_event/");
+  }
+
 
 }

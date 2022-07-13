@@ -1,35 +1,14 @@
-<br>
 
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div style="margin:auto; width: 50%; border: 3px solid black; padding: 10px;">
+<!-- <div style="margin:auto; width: 50%; border: 3px solid black; padding: 10px;">
 	<select class="bg-secondary" style="margin:auto; width: 50%;" name="" id="" [(ngModel)]="CategorySelected" (ngModelChange)="onCategorySelected($event)">
-		<option value="" *ngFor="let category of listCategories" [value]="category.id">
+		<option value="" *ngFor="let category of listCategoriebs" [value]="category.id">
 			{{category.title}}
 		</option>
 	</select>
-</div>
-
-<!-- <ul *ngFor="let event of listEvents" >
-	<li>Event Title : {{event.title}}</li>
-	<li>Event Description : {{event.about}}</li>
-	<img [src]="event.photo" alt="qwerty">
-	<li>Event Location : {{event.Location}}</li>
-	<li>Event Due Date{{event.due_date}}</li>
-	<li>Date Posted : {{event.date}}</li>
-</ul> -->
+</div> -->
 
 
-
-
-
-<article class="col-md-12">
+<!-- <article class="col-md-12">
 	<div class="cards-1 section-gray">
 			<div class="container">
 					<div class="row">
@@ -37,13 +16,22 @@
 									<div class="card card-blog" >
 											<div class="card-image" >
 													<a href="#"> <img class="img" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg">
-															<div class="card-caption"><em>{{event.title}} </em> </div>
+															<div class="card-caption fs-2"><em>{{event.title}} </em> </div>
 													</a>
 													<div class="ripple-cont"></div>
 											</div>
 											<div class="table">
-													<h6 class="category text-info">{{event.Location}}</h6>
-													<p class="card-description"> {{event.about}} <br>{{event.due_date}} </p>
+													<h6 class="category text-info fs-3">{{event.Location}}</h6>
+													<p class="card-description fs-4"> {{event.about}} <br>{{event.due_date}} </p>
+													<div class="container-fluid py-3">													
+														<share-buttons theme="circles-dark"
+															[include]="['copy', 'facebook', 'twitter', 'whatsapp']"
+															[showIcon]="true"
+															[showText]="false"
+															url="https://rodrigo.kamada.com.br/"
+															class="pt-1">
+														</share-buttons>												
+													</div>
 											</div>
 									</div>
 							</div>
@@ -51,7 +39,7 @@
 							
 					</div>
 			</div>
-	</div>
+	</div> -->
 
 
 
@@ -59,37 +47,14 @@
 
 
 
-<!-- <ul *ngFor="let event of listEvents" >
-	<li>{{event.title}}</li>
-	<li>{{event.about}}</li>
-	<li>{{event.id}}</li>
-	<li>{{event.time}}</li>
-	<img src="{{event.photo}}" alt="">
-	<li>{{event.Location}}</li>
-	<li>{{event.due_date}}</li>
-	<li>{{event.date}}</li>
-	<li>{{event.county}}</li>
-</ul>
 
 
 
 
 
 
-<div class="row">
-	<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-		<div class="fh5co-bg-img" style="background-image: url(/assets/images/cul3.jpg);" data-trigger="zoomerang">
-			<div class="row tickets ">
-				<div class="col-md-12 col-md-offset-2 going " *ngFor="let event of listEvents">
-					<p class="text-danger">{{event.title}}</p>
-					<img src="{{event.photo}}" alt="">
-					
-				
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
+
+
 
 
 
@@ -131,24 +96,101 @@
 				</div>
 
 				
+
+
+
+				<div style="margin:auto; width: 50%;  padding: 10px;">
+					<!-- <h1 class="text-center text-light">Select <em> Events </em> By Categories</h1> -->
+					<div class="drop">
+						<label class="text-light fs-1" for="">Select <em> Events </em> By Categories
+							<select class="bg-secondary text-light fs-4 "  name="" id="" [(ngModel)]="CategorySelected" (ngModelChange)="onCategorySelected($event)" >
+								<option class="fs-4" value="" *ngFor="let category of listCategories" [value]="category.id">
+									{{category.title}}
+								</option>
+							</select>
+						</label>
+					</div>
+					
+				</div>
+
+				<br>
+				<br>
+				
+				
+				<!-- <article class="col-md-12"> -->
+					<div class=" cards-1 section-gray">
+							<div class="container">
+									<div class="row">
+											<div class="col-md-4" *ngFor="let event of listEvents">
+													<div class="card card-blog" >
+															<div class="card-image" >
+																	<a href="#"> <img class="img" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg">
+																			<div class="card-caption fs-2"><em>{{event.title}} </em> </div>
+																	</a>
+																	<div class="ripple-cont"></div>
+															</div>
+															<div class="table">
+																	<h6 class="category text-info fs-3">{{event.Location}}</h6>
+																	<p class="card-description fs-4 text-dark"> {{event.about}} <br>{{event.due_date}} </p>
+																	<div class="container-fluid py-3">													
+																		<share-buttons theme="circles-dark"
+																			[include]="['copy', 'facebook', 'twitter', 'whatsapp']"
+																			[showIcon]="true"
+																			[showText]="false"
+																			url="https://rodrigo.kamada.com.br/"
+																			class="pt-1">
+																		</share-buttons>												
+																	</div>
+															</div>
+													</div>
+											</div>
+																				
+											
+									</div>
+							</div>
+					</div>
+
+					<br>
+					<br>
+					<br>
+					<br>
+
+
+
+
+
+					<ul class="text-light fs-4" *ngFor="let events of lstEvents" >
+						<li>Event Title : {{events.title}}</li>
+						<li>Event Description : {{events.about}}</li>
+						<img src="{{events.photo}}" alt="qwerty">
+						<li>Event Location : {{events.Location}}</li>
+						<li>Event Due Date{{events.due_date}}</li>
+						<li>Date Posted : {{events.date}}</li>
+					</ul>
 				
 
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+
+
+
+				
+				
+
+				<!-- <div class="col-md-3 col-sm-3 fh5co-gallery_item">
 					<div class="fh5co-bg-img" style="background-image: url(/assets/images/cul3.jpg);" data-trigger="zoomerang">
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/cul6.jpg);" data-trigger="zoomerang">
+					<!-- <div class="fh5co-bg-img" style="background-image: url(/assets/images/cul6.jpg);" data-trigger="zoomerang">
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
@@ -159,19 +201,19 @@
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a  href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					
-				</div>
+				<!-- </div>
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
 					<div class="fh5co-bg-img" style="background-image: url(/assets/images/event-2.jpg);" data-trigger="zoomerang">
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
@@ -180,19 +222,19 @@
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+				<!-- <div class="col-md-3 col-sm-3 fh5co-gallery_item">
 					<div class="fh5co-bg-img" style="background-image: url(/assets/images/event-4.png);" data-trigger="zoomerang">
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
@@ -200,7 +242,7 @@
 					<div class="fh5co-bg-img" style="background-image: url(/assets/images/event-5.jpg);" data-trigger="zoomerang"><div class="row tickets ">
 						<div class="col-md-12 col-md-offset-2 going ">
 							<p class=""><em>Lets party</em></p>
-							<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+							<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 							<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 						</div>
 					</div>
@@ -211,7 +253,7 @@
 						<div class="row tickets ">
 							<div class="col-md-12 col-md-offset-2 going ">
 								<p class=""><em>Lets party</em></p>
-								<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+								<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 								<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 							</div>
 						</div>
@@ -219,7 +261,7 @@
 					<div class="fh5co-bg-img" style="background-image: url(/assets/images/event-7.jpg);" data-trigger="zoomerang"><div class="row tickets ">
 						<div class="col-md-12 col-md-offset-2 going ">
 							<p class=""><em>Lets party</em></p>
-							<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+							<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 							<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 						</div>
 					</div>
@@ -229,39 +271,15 @@
 					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(/assets/images/event-5.jpg);" data-trigger="zoomerang"><div class="row tickets ">
 						<div class="col-md-12 col-md-offset-2 going ">
 							<p class=""><em>Lets party</em></p>
-							<!-- <p><a href="" class="btn btn-primary btn-outline">Going</a></p> -->
+							<p><a href="" class="btn btn-primary btn-outline">Going</a></p>
 							<p><a href="" class="btn btn-primary btn-outline">View Event</a>$30</p>
 						</div>
 					</div>
 				</div>
 				</div>
-
-				<!-- <div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_1.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_2.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(/assets/images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_4.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_6.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_7.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(/assets/images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(/assets/images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
-				</div> -->
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="fh5co-featured-testimony" class="fh5co-section">
 		<div class="container">
@@ -275,10 +293,10 @@
 					</div>
 				</div>
 
-				<!-- <div class="col-md-5 animate-box img-to-responsive animate-box img-fluid" data-animate-effect="fadeInLeft">
+				<div class="col-md-5 animate-box img-to-responsive animate-box img-fluid" data-animate-effect="fadeInLeft">
 						<img src="/assets/images/event-2.jpg" alt="" class="img-fluid">
 				</div>
-				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
+				<!-- <div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
 					<blockquote>
 						<p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
 						<p class="author"><cite>&mdash; Jane Smith</cite></p>
