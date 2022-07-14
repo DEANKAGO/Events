@@ -28,11 +28,14 @@ export class EventsComponent implements OnInit {
       this.listCategories = data;
     })
 
+
     this._eventService.getMainEvents().subscribe(data=>{
       this.lstEvents = data;
     })
+    console.log("this.listCategories", this.listCategories);
 
   }
+  
 
 
   onCategorySelected(selectedCategoryId:any): void {
