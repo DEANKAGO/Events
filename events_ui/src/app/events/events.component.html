@@ -121,9 +121,9 @@
 							<div class="container">
 									<div class="row">
 											<div class="col-md-4" *ngFor="let event of listEvents">
-													<div class="card card-blog" >
+													<div class="card card-blog" style="max-height: 400px">
 															<div class="card-image" >
-																	<a href="#"> <img class="img" src="{{event.photo}}">
+																	<a href="#"> <img class="img" style="max-height: 50vh" src="{{event.photo}}">
 																			<div class="card-caption fs-2"><em>{{event.title}} </em> </div>
 																	</a>
 																	<div class="ripple-cont"></div>
@@ -154,7 +154,7 @@
 							<div class="row" >				
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item" *ngFor="let events of lstEvents |slice:1:2">
-										<img src="{{events.photo}}" class="img-responsive" alt="">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -162,7 +162,7 @@
 								</div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item margin_top" *ngFor="let events of lstEvents |slice:2:3">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -171,7 +171,7 @@
 								<div class="clearfix visible-sm-block visible-xs-block"></div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item" *ngFor="let events of lstEvents |slice:3:4">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -179,7 +179,7 @@
 								</div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item margin_top" *ngFor="let events of lstEvents |slice:0:1">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -188,7 +188,7 @@
 
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item" *ngFor="let events of lstEvents |slice:4:5">
-										<img src="{{events.photo}}" class="img-responsive" alt="">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -196,7 +196,7 @@
 								</div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item margin_top" *ngFor="let events of lstEvents |slice:5:6">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -205,7 +205,7 @@
 								<div class="clearfix visible-sm-block visible-xs-block"></div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item" *ngFor="let events of lstEvents |slice:6:7">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
@@ -213,7 +213,7 @@
 								</div>
 								<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 									<div class="fh5co-item margin_top" *ngFor="let events of lstEvents |slice:7:8">
-										<img src="{{events.photo}}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+										<img src="{{events.photo}}" class="img-responsive" style="max-height: 50vh" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 										<h1 class="text-light">{{events.title}}</h1>
 										<span class="fh5co-price">{{events.due_date}}</span>
 										<p>{{events.about}}</p>
